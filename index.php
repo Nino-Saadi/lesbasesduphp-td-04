@@ -1,5 +1,15 @@
 <?php
-// écrire votre code ici
+$password = "Doffysama2";
+$message = '';
+
+if ($password < 8) {
+  $message =  "« mot de passe est trop court, le mot de passe doit comporter au moins 8 caractères »"
+  else { if ($password ) {
+    $message = "«Le mot de passe doit comporter au moins une majuscule »"
+  }
+  }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -18,9 +28,9 @@
 <body>
   <div class="container">
     <h1 class="text-center">Condition - PHP</h1>
-    
+
     <div class="alert"> <!-- ajoutez la classe bootstrap dynamiquement -->
-      <p>Remplacez-moi par le message</p>
+      <p><?= $message ?></p>
     </div>
   </div>
 
